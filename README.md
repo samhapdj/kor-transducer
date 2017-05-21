@@ -19,7 +19,7 @@ $ make install
 
 Run 
 ```
-$ echo 우리는 집에 간다." | apertium -d . kor-morph
+$ echo "우리는 집에 간다." | apertium -d . kor-morph
 ```
 to test
 
