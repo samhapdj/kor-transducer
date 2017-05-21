@@ -1,0 +1,206 @@
+! Morphological Transducer for kor
+
+Multichar_Symbols
+
+! Part of speech categories
+%<n%>   ! Noun
+%<v%>   ! Verb
+%<adj%> ! Adjective
+%<adv%> ! Adverb
+%<det%> ! Determiner
+%<prn%> ! Pronoun
+%<np%>  ! Proper Name
+%<adv%> ! Adverb
+%<post%> ! Particle
+%<ij%>  ! Interjection
+%<num%> ! Numeral
+%<vadj%> ! Verbal Adjective
+%<vn%>  ! Verbal Noun
+%<prf%> ! Pre-Suffix
+%<psf%> ! Post-suffix
+%<csfcoo%> ! Coordinating Conjunction
+%<csfsub%> ! Subordinating Conjunction
+
+!
+%<pass%> ! Passive 
+
+!negative
+%<neg%> ! negative 
+
+! Tense - Verb Pre suffix
+%<pres%> ! Present
+%<past%> ! Past
+
+! Mode -  Verb Post suffix
+%<aff%> ! Affirmative
+%<itg%> ! Interrogative
+%<neg%> ! Negative
+%<imp%> ! Imperative
+%<dec%> ! Declarative
+%<inj%> ! Injunctive
+
+! Politness
+%<fam%> ! familiar
+%<hon%> ! Honorific
+
+! Case - Particle
+%<nom%> ! Nominative
+%<acc%> ! Accusative
+%<gen%> ! Genitive
+%<dat%> ! Dative
+%<loc%> ! Locative
+%<ins%> ! Instrumental
+%<com%> ! Comitative
+%<top%> ! Topic
+%<add%> ! Additive
+%<con%> ! Conjunctive
+%<tra%> ! Transitive
+
+! Number morphology
+%<pl%>  ! Plural
+%<sg%>  ! Singular
+%<ct%>  ! Counting units
+%<ord%> ! Ordinal
+%<ctn%> ! Counting numbers
+
+!Animacy(for nouns)
+%<aa%> ! Animate
+%<an%> ! Animate or Inanimate
+%<nn%> ! Inanimate
+
+! Other symbols
+%>      ! Morpheme boundary
+
+! Punctuation
+%<sent%>      ! Sentence marker
+%<guio%>      ! Hyphen
+%<cm%>        ! Comma
+%<apos%>      ! Apostrophe
+%<rquot%>     ! Quote marker (right hand side) 
+%<lquot%>     ! Quote marker (left hand side) 
+%<rpar%>      ! Parenthetical marker (right hand side) 
+%<lpar%>      ! Parenthetical marker (left hand side) 
+
+! Chars
+ㄱ !
+ㄴ !
+ㄷ !
+ㄹ !
+ㅁ !
+ㅂ !
+ㅅ !
+ㅇ !
+ㅈ !
+ㅊ !
+ㅋ !
+ㅌ !
+ㅍ !
+ㅎ !
+ㄲ !
+ㄸ !
+ㅃ !
+ㅆ !
+ㅉ !
+ㅏ !
+ㅑ !
+ㅓ !
+ㅕ !
+ㅗ !
+ㅛ !
+ㅜ !
+ㅠ !
+ㅡ !
+ㅣ !
+ㅐ !
+ㅒ !
+ㅔ !
+ㅖ !
+ㅘ !
+ㅙ !
+ㅚ !
+ㅝ !
+ㅞ !
+ㅟ !
+ㅢ !
+ㄳ !
+ㄵ !
+ㄶ !
+ㄺ !
+ㄻ !
+ㄼ !
+ㄽ !
+ㄾ !
+ㄿ !
+ㅀ !
+ㅄ !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!                       M O R P H O T A C T I C S                         !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+LEXICON Root
+
+Nouns ; 
+Verbs ;
+Punctuation ; 
+
+LEXICON N1 
+
+%<n%>: # ;
+%<n%>%<pl%>:ㄷㅓㄹ # ;
+%<n%>%<top%>:ㄴㅡㄴ # ;
+%<n%>%<pres%>:ㅇㅣㄷㅏ # ;
+
+LEXICON V1 
+
+%<v%>: # ;
+#%<v%>%<pres%>:ㄷㅏ # ;
+%<v%>%<pres%>:ㅇㅣㄷㅏ # ;
+
+LEXICON Nouns
+
+아바지:ㅇㅏㅂㅏㅈㅣ N1 ; !
+아:ㅇㅏ N1 ; !
+차:ㅊㅏ N1 ; !
+사람:ㅅㅏㄹㅏㅁ N1 ; !
+나:ㄴㅏ N1 ; !
+도준:ㄷㅗㅈㅜㄴ N1 ; !
+길:ㄱㅣㄹ N1 ; !
+
+LEXICON Verbs
+
+살:ㅅㅏㄹ V1 ; !
+
+LEXICON Punctuation
+
+.%<sent%>:. # ;
+..%<sent%>:.. # ;
+...%<sent%>:... # ;
+%;%<sent%>:%; # ;
+%:%<sent%>:%: # ;
+%!%<sent%>:%! # ;
+%-%<guio%>:%- # ;
+%—%<guio%>:%— # ;
+,%<cm%>:, # ;
+%?%<sent%>:%? # ;
+%'%<apos%>:%' # ;
+%"%<sent%>:%" # ;
+%«%<lquot%>:%« # ;
+%»%<rquot%>:%» # ;
+%”%<rquot%>:%” # ;
+%“%<lquot%>:%“ # ;
+%(%<lpar%>:%( # ;
+%]%<rpar%>:%] # ;
+%[%<lpar%>:%[ # ;
+%)%<rpar%>:%) # ;
+\%<sent%>:\ # ;
+/%<sent%>:/ # ;
+
+! Resources:
+! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon
+! http://wiki.apertium.org/wiki/Lttoolbox_and_lexc
+! http://wiki.apertium.org/wiki/Apertium-specific_conventions_for_lexc
+! https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstHome
+! http://hfst.sourceforge.net/
+! http://www.cis.upenn.edu/~cis639/docs/lexc.html
+! http://wiki.apertium.org/wiki/Hfst

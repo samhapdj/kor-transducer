@@ -1,0 +1,96 @@
+Alphabet
+
+ ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅅ ㅇ ㅈ ㅊ ㅋ ㅌ ㅍ ㅎ ㄲ ㄸ ㅃ ㅆ ㅉ
+ ㅏ ㅑ ㅓ ㅕ ㅗ ㅛ ㅜ ㅠ ㅡ ㅣ ㅐ ㅒ ㅔ ㅖ ㅘ ㅙ ㅚ ㅝ ㅞ ㅟ ㅢ
+ ㄳ ㄵ ㄶ ㄺ ㄻ ㄼ ㄽ ㄾ ㄿ ㅀ ㅄ 으
+
+ %{ㅇ%}:ㅇ !
+ %{ㅡ%}:ㅡ !
+ %{ㅣ%}:ㅣ !
+ %{ㅓ%}:ㅓ !
+ %{ㅏ%}:ㅏ !
+ %{ㅕ%}:ㅕ !
+ %{ㄴ%}:ㄴ !
+ %{ㄹ%}:ㄹ !
+ %{ㅆ%}:ㅆ !
+ %{ㅅ%}:ㅅ !
+
+ %% %, %. %- %>:0 % %..   ! punctuation and boundaries
+
+ %>:0 
+;
+
+Sets
+
+Vowel = ㅏ ㅑ ㅓ ㅕ ㅗ ㅛ ㅜ ㅠ ㅡ ㅣ ㅐ ㅒ ㅔ ㅖ ㅘ ㅙ ㅚ ㅝ ㅞ ㅟ ㅢ ;
+
+Consonant = ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅅ ㅇ ㅈ ㅊ ㅋ ㅌ ㅍ ㅎ ㄲ ㄸ ㅃ ㅆ ㅉ ㄳ ㄵ ㄶ ㄺ ㄻ ㄼ ㄽ ㄾ ㄿ ㅀ ㅄ  ;
+
+
+Rules 
+
+"topic vowel-consonant alteration - this is now how it should be done"
+ㄴ:ㅇ <=> :Consonant %>:  _  ㅡ: ㄴ:  ;
+
+"accusative vowel-consonant alteration"
+ㄹ:ㅇ <=> :Consonant %>:  _  ㅡ: ㄹ:  ;
+
+"comitative vowel-consonant alteration"
+ㅇ:ㄱ <=> :Consonant %>:  _  ㅘ:  ;
+
+"nomin vowel-consonant alteration 1"
+ㄱ:ㅇ <=> :Consonant %>:  _  ㅏ:  ;
+
+"nomin vowel-consonant alteration 2"
+ㅏ:ㅣ <=> %>:  :ㅇ  _    ;
+
+"ins  vowel-consonant alteration 1"
+%{ㅇ%}:0  <=> :Vowel | :ㄹ %>:  _  %{ㅡ%}: ;
+
+"ins  vowel-consonant alteration 2"
+%{ㅡ%}:0  <=> :Vowel | :ㄹ %>: :0 _   ;
+
+"declarative case ending alteration after vowel ending 1"
+%{ㄴ%}:0  <=> :Vowel  	%>:  _  %{ㅡ%}: ;
+
+
+"Verbal Adjective full Adjectivication Process 1"
+%{ㅇ%}:0  <=> :Vowel  	%>:  _  %{ㅡ%}: ;
+
+"Verbal Adjective full Adjectivication Process 2"
+%{ㅡ%}:0  <=> :Vowel  	%>: :0 _   ;
+
+"copula skip after vowel ending 1"
+%{ㅇ%}:0  <=> :Vowel  	%>:  _  %{ㅣ%}: ;
+
+"copula skip after vowel ending 2"
+%{ㅣ%}:0  <=> :Vowel  	%>: :0 _  ;
+
+
+"imperative case ending alteration after vowel ending 1"
+%{ㅇ%}:0  <=> :Vowel  	%>:  _  %{ㅓ%}: ;
+
+"imperative case ending alteration after vowel ending  2"
+%{ㅓ%}:0  <=> :Vowel  	%>: :0 _  ;
+
+"vowel harmony"
+%{ㅏ%}:ㅓ  <=> \:ㅏ  %>: :ㅇ _ ㅆ:  ;
+
+" vowel ending 1"
+%{ㅇ%}:0  <=> :Vowel  	%>:  _  %{ㅏ%}: ;
+
+"vowel ending  2"
+%{ㅏ%}:0  <=> :Vowel  	%>: :0 _  ;
+
+"Honorific Process 1"
+%{ㅅ%}:0  <=> :Vowel  	%>:  _  %{ㅡ%}: ;
+
+"Imperative double ㄹ deletion Process 1"
+ㄹ:0  <=>   ㄹ	%>:  _  ㅏ: ;
+
+! Resources:
+! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol
+! https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstHome
+! http://hfst.sourceforge.net/
+! http://wiki.apertium.org/wiki/Twol
+! http://wiki.apertium.org/wiki/Hfst
